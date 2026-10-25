@@ -1,0 +1,33 @@
+{
+  "verified_from_official_docs": false,
+  "status_list_officially_verified": false,
+  "allowed_hosts": ["developer.kbsec.com"],
+  "oauth": {
+    "url": "https://developer.kbsec.com:32484/oauth2/token",
+    "method": "POST",
+    "body_type": "json",
+    "body": {"grant_type": "client_credentials"},
+    "key_field": "REPLACE_OFFICIAL_KEY_FIELD",
+    "secret_field": "REPLACE_OFFICIAL_SECRET_FIELD",
+    "token_field": "access_token"
+  },
+  "daily": {
+    "url": "https://developer.kbsec.com:32484/REPLACE_WITH_OFFICIAL_DAILY_ENDPOINT",
+    "method": "GET",
+    "headers": {},
+    "authorization_header": "Authorization",
+    "authorization_prefix": "Bearer ",
+    "params": {},
+    "code_param": "REPLACE_OFFICIAL_TICKER_PARAMETER",
+    "start_param": "REPLACE_OFFICIAL_START_DATE_PARAMETER",
+    "end_param": "REPLACE_OFFICIAL_END_DATE_PARAMETER",
+    "rows_path": "REPLACE_OFFICIAL_RESPONSE_LIST_PATH",
+    "fields": {
+      "date": "REPLACE", "open": "REPLACE", "high": "REPLACE",
+      "low": "REPLACE", "close": "REPLACE", "volume": "REPLACE",
+      "turnover_krw": "REPLACE"
+    }
+  },
+  "universe": [{"ticker":"005930", "name":"삼성전자"}],
+  "request_interval_seconds": 0.4
+}
